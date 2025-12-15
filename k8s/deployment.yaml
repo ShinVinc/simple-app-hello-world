@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: helloworld-deployment
+  labels:
+    app: helloworld
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: helloworld
+  template:
+    metadata:
+      labels:
+        app: helloworld
+    spec:
+      containers:
+      - name: helloworld-app
+        # Ganti dengan image Anda sendiri, atau gunakan yang sederhana untuk demo
+        image: shinvinc/simple-app-hello-world:v1.0.0
+        ports:
+        - containerPort: 3000
