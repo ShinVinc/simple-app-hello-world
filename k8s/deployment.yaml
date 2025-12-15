@@ -17,6 +17,6 @@ spec:
       containers:
       - name: helloworld-app
         # Ganti dengan image Anda sendiri, atau gunakan yang sederhana untuk demo
-        image: shinvinc/simple-app-hello-world:v1.0.0
+        image: shinvinc/simple-app-hello-world:v1.0.5
         ports:
         - containerPort: 3000
